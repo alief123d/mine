@@ -1,0 +1,30 @@
+.container-navbar {
+   background-color: bisque;
+   height: 27px;
+   border-radius: 5px;
+}
+
+.li-navbar {
+    list-style: none;
+}
+
+ a {
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    font-weight: 600;
+}
+
+a:hover {
+    background-color: rgb(25, 165, 247);
+    border-radius: 3px;
+
+}
+
+img {
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
