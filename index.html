@@ -15,21 +15,33 @@
 
 <body onload="setInterval('displayTime()', 1000);">
 
-    
-    <div id="container">
-        <div class="container-navbar">
-            <li class="li-navbar">
-                <ul class="ul-navbar"></ul>
-                <a href="#">HOME</a>
-            </li>
-        </ul>
-    </div>
-    <button class="btn btn-primary text-uppercase fw-bold" onclick="onLogout()" id="logoutButton">logout</button>
-    <h1 id="jam"></h1>
 
-    <input type="text" id="jaminput" name="">
-    <br>
-    <br>
+    <div id="container" class="pt-10">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="➶ 𝔦𝔫𝔲𝔪𝔞𝔨𝔦 ┊.png" alt="" width="36" height="40"
+                        class="d-inline-block align-text-top">
+                    ALIEF
+                </a>
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand text-decoration-none fs-6">Home</a>
+                    <a href="Personal.html" class="navbar-brand text-decoration-none fs-6">Personal</a>
+                    <a href="bio.html" class="navbar-brand text-decoration-none fs-6">Bio</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <br>
+
+        <button class="btn btn-primary text-uppercase fw-bold" onclick="onLogout()" id="logoutButton">logout</button>
+        <br>
+        <h1 id="jam"></h1>
+
+        <input type="text" id="jaminput" name="">
+        <br>
+        <br>
 
         <div class="container mt-3">
             <div class="row">
@@ -45,6 +57,10 @@
                         <p class="card-text">4.pkn = 13:40-15:40</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
                 <div class="card col">
                     <div class="card-header">
                         SELASA
@@ -76,6 +92,10 @@
                         <p class="card-text">4.b.arab = 13:40-15:40</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
                 <div class="card col">
                     <div class="card-header">
                         KAMIS
@@ -90,6 +110,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container mt-3">
             <div class="row">
                 <div class="card col">
@@ -106,115 +127,145 @@
 
             </div>
         </div>
+        
+
     </div>
 
+
+
     <div id="cnrmy">
-        <div class="container-navbar">
-            <li class="li-navbar">
-                <ul class="ul-navbar"></ul>
-                <a href="#">HOME</a>
-            </li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class=" navbar-brand text-decoration-none fw-bold fs-5">RUMY</a>
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand text-decoration-none fs-6">Home</a>
+                    <a href="ru-personal.html" class="navbar-brand text-decoration-none fs-6">Personal</a>
+        </nav>
+        <br>
         <button class="btn btn-primary text-uppercase fw-bold" onclick="onLogout()" id="logoutButton">logout</button>
-        <img src="go lumine!!.png" />
+        <br>
+        <br>
+        <img class="w-25" src="go lumine!!.png" />
+
+    </div>
 
     </div>
 
     <div class="container d-flex justify-content-center align-items-center
-    min-vh-100">
+                min-vh-100">
         <div class="d-flex flex-column">
             <h1 id="wel">WELCOME</h1>
             <div class="d-flex flex-column gap-2 mt-2">
                 <input type="password" placeholder="password" id="passwordinput" />
+                <br>
                 <button class="btn btn-primary text-uppercase fw-bold" onclick="onLogin()"
                     id="loginButton">login</button>
+                <br>
+                <div class="dropdown" id="down">
+                    <button class="mainmenubtn">updates</button>
+                    <div class="dropdown-child">
+                        <a>new navbar</a>
+                        <a>Personal update</a>
+                        <a>Bio</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
+        <div class="re-2">
+            <script type="application/javascript">
+                let loginButton = document.getElementById('loginButton')
+                let logoutButton = document.getElementById('logoutButton')
+                let container = document.getElementById('container')
+                let passwordinput = document.getElementById('passwordinput')
+                let wel = document.getElementById('wel')
+                let cnrmy = document.getElementById('cnrmy')
+                let down = document.getElementById('down')
 
-    <div class="re-2">
-        <script type="application/javascript">
-            let loginButton = document.getElementById('loginButton')
-            let logoutButton = document.getElementById('logoutButton')
-            let container = document.getElementById('container')
-            let passwordinput = document.getElementById('passwordinput')
-            let wel = document.getElementById('wel')
-            let cnrmy = document.getElementById('cnrmy')
-
-            container.style.display = "none"
-            logoutButton.style.display = "none"
-            cnrmy.style.display = "none"
-
-
-
-            function onLogin() {
-                localStorage.setItem("password", passwordinput.value)
-                container.style.display = "block"
-                logoutButton.style.display = "block"
-                cnrmy.style.display = "block"
+                container.style.display = "none"
+                logoutButton.style.display = "none"
+                cnrmy.style.display = "none"
 
 
 
-                if (passwordinput.value == "040908") {
-                    alert('hi alief')
+                function onLogin() {
+                    localStorage.setItem("password", passwordinput.value)
                     container.style.display = "block"
                     logoutButton.style.display = "block"
-                    passwordinput.style.display = "none"
-                    loginButton.style.display = "none"
-                    wel.style.display = "none"
-                    cnrmy.style.display = "none"
-
-                } else if (passwordinput.value == "090101") {
-                    alert('hi rumy')
                     cnrmy.style.display = "block"
-                    container.style.display = "none"
-                    logoutButton.style.display = "none"
-                    passwordinput.style.display = "none"
-                    loginButton.style.display = "none"
-                    wel.style.display = "none"
 
-                } else {
-                    alert('wrong password')
-                    container.style.display = "none"
-                    logoutButton.style.display = "none"
-                    cnrmy.style.display = "none"
+
+
+                    if (passwordinput.value == "040908") {
+                        alert('hi alief')
+                        container.style.display = "block"
+                        logoutButton.style.display = "block"
+                        passwordinput.style.display = "none"
+                        loginButton.style.display = "none"
+                        wel.style.display = "none"
+                        cnrmy.style.display = "none"
+                        down.style.display = "none"
+
+                    } else if (passwordinput.value == "090101") {
+                        alert('hi rumy')
+                        cnrmy.style.display = "block"
+                        container.style.display = "none"
+                        logoutButton.style.display = "none"
+                        passwordinput.style.display = "none"
+                        loginButton.style.display = "none"
+                        wel.style.display = "none"
+                        down.style.display = "none"
+
+                    } else {
+                        alert('wrong password')
+                        container.style.display = "none"
+                        logoutButton.style.display = "none"
+                        cnrmy.style.display = "none"
+                        down.style.display = "none"
+
+                    }
+
+
+                }
+                if (localStorage.getItem('password')) {
+                    usernameinput.style.display = "none"
+                    passwordinput.style.display = "none"
+                    loginbutton.style.display = "none"
+                    container.style.display = "block"
+                    logoutButton.style.display = "block"
 
                 }
 
-
-            }
-            if (localStorage.getItem('password')) {
-                usernameinput.style.display = "none"
-                passwordinput.style.display = "none"
-                loginbutton.style.display = "none"
-                container.style.display = "block"
-                logoutButton.style.display = "block"
-               
-            }
-
-            function onLogout() {
-                localStorage.clear()
-                location.reload()
+                function onLogout() {
+                    localStorage.clear()
+                    location.reload()
 
 
-            }
+                }
 
-            function displayTime() {
-                var clientTime = new Date();
-                var time = new Date(clientTime.getTime());
-                var sh = time.getHours().toString();
-                var sm = time.getMinutes().toString();
-                var ss = time.getSeconds().toString();
-                document.getElementById("jam").innerHTML = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
-                document.getElementById("jaminput").value = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
-            }
+                function displayTime() {
+                    var clientTime = new Date();
+                    var time = new Date(clientTime.getTime());
+                    var sh = time.getHours().toString();
+                    var sm = time.getMinutes().toString();
+                    var ss = time.getSeconds().toString();
+                    document.getElementById("jam").innerHTML = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
+                    document.getElementById("jaminput").value = (sh.length == 1 ? "0" + sh : sh) + ":" + (sm.length == 1 ? "0" + sm : sm) + ":" + (ss.length == 1 ? "0" + ss : ss);
+                }
 
 
-        </script>
-    </div>
+            </script>
+        </div>
+
+        <!-- <div class="container-navbar">
+            <li class="li-navbar">
+                <ul class="ul-navbar"></ul>
+                <a href="#">HOME</a>
+            </li>
+            </ul>
+        </div> -->
 
 </body>
 
